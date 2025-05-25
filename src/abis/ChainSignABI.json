@@ -1,0 +1,204 @@
+[
+  {
+    "name": "DocumentSignerImpl",
+    "type": "impl",
+    "interface_name": "chainsign_smartcontract::documentsigner::IDocumentSigner"
+  },
+  {
+    "name": "chainsign_smartcontract::documentsigner::Document",
+    "type": "struct",
+    "members": [
+      {
+        "name": "id",
+        "type": "core::integer::u64"
+      },
+      {
+        "name": "sender",
+        "type": "core::starknet::contract_address::ContractAddress"
+      },
+      {
+        "name": "ipfs_hash",
+        "type": "core::felt252"
+      },
+      {
+        "name": "document_name",
+        "type": "core::felt252"
+      },
+      {
+        "name": "document_type",
+        "type": "core::felt252"
+      },
+      {
+        "name": "sent_at",
+        "type": "core::integer::u64"
+      },
+      {
+        "name": "current_signer_index",
+        "type": "core::integer::u32"
+      },
+      {
+        "name": "status",
+        "type": "core::integer::u8"
+      }
+    ]
+  },
+  {
+    "name": "chainsign_smartcontract::documentsigner::IDocumentSigner",
+    "type": "interface",
+    "items": [
+      {
+        "name": "send_document",
+        "type": "function",
+        "inputs": [
+          {
+            "name": "ipfs_hash",
+            "type": "core::felt252"
+          },
+          {
+            "name": "document_name",
+            "type": "core::felt252"
+          },
+          {
+            "name": "document_type",
+            "type": "core::felt252"
+          },
+          {
+            "name": "signers",
+            "type": "core::array::Array::<core::starknet::contract_address::ContractAddress>"
+          }
+        ],
+        "outputs": [],
+        "state_mutability": "external"
+      },
+      {
+        "name": "sign_document",
+        "type": "function",
+        "inputs": [
+          {
+            "name": "doc_id",
+            "type": "core::integer::u64"
+          }
+        ],
+        "outputs": [],
+        "state_mutability": "external"
+      },
+      {
+        "name": "decline_document",
+        "type": "function",
+        "inputs": [
+          {
+            "name": "doc_id",
+            "type": "core::integer::u64"
+          }
+        ],
+        "outputs": [],
+        "state_mutability": "external"
+      },
+      {
+        "name": "get_document",
+        "type": "function",
+        "inputs": [
+          {
+            "name": "doc_id",
+            "type": "core::integer::u64"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "chainsign_smartcontract::documentsigner::Document"
+          }
+        ],
+        "state_mutability": "view"
+      }
+    ]
+  },
+  {
+    "kind": "struct",
+    "name": "chainsign_smartcontract::documentsigner::DocumentSent",
+    "type": "event",
+    "members": [
+      {
+        "kind": "data",
+        "name": "doc_id",
+        "type": "core::integer::u64"
+      },
+      {
+        "kind": "data",
+        "name": "sender",
+        "type": "core::starknet::contract_address::ContractAddress"
+      },
+      {
+        "kind": "data",
+        "name": "timestamp",
+        "type": "core::integer::u64"
+      }
+    ]
+  },
+  {
+    "kind": "struct",
+    "name": "chainsign_smartcontract::documentsigner::DocumentSigned",
+    "type": "event",
+    "members": [
+      {
+        "kind": "data",
+        "name": "doc_id",
+        "type": "core::integer::u64"
+      },
+      {
+        "kind": "data",
+        "name": "signer",
+        "type": "core::starknet::contract_address::ContractAddress"
+      },
+      {
+        "kind": "data",
+        "name": "timestamp",
+        "type": "core::integer::u64"
+      }
+    ]
+  },
+  {
+    "kind": "struct",
+    "name": "chainsign_smartcontract::documentsigner::DocumentDeclined",
+    "type": "event",
+    "members": [
+      {
+        "kind": "data",
+        "name": "doc_id",
+        "type": "core::integer::u64"
+      },
+      {
+        "kind": "data",
+        "name": "signer",
+        "type": "core::starknet::contract_address::ContractAddress"
+      },
+      {
+        "kind": "data",
+        "name": "timestamp",
+        "type": "core::integer::u64"
+      }
+    ]
+  },
+  {
+    "kind": "enum",
+    "name": "chainsign_smartcontract::documentsigner::Event",
+    "type": "event",
+    "variants": [
+      {
+        "kind": "nested",
+        "name": "DocumentSent",
+        "type": "chainsign_smartcontract::documentsigner::DocumentSent"
+      },
+      {
+        "kind": "nested",
+        "name": "DocumentSigned",
+        "type": "chainsign_smartcontract::documentsigner::DocumentSigned"
+      },
+      {
+        "kind": "nested",
+        "name": "DocumentDeclined",
+        "type": "chainsign_smartcontract::documentsigner::DocumentDeclined"
+      }
+    ]
+  }
+]
+
