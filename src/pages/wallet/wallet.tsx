@@ -1,8 +1,3 @@
-// src/pages/wallet/wallet.tsx
-// -----------------------------------------------------------------------------
-// Basit cüzdan bağlama ekranı — kullanıcıdan Starknet cüzdanını (ArgentX / Braavos)
-// bağlamasını ister, ardından bağlı adresi ve ağı gösterir.
-// -----------------------------------------------------------------------------
 
 import { useState } from 'react';
 import { connectWallet } from '../services/starknet';
