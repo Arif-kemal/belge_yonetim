@@ -1,0 +1,108 @@
+.wallet-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9fafb;
+    font-family: 'Inter', sans-serif;
+}
+
+.wallet-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 28rem;
+    color: #1a202c;
+}
+
+.wallet-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.wallet-subtitle {
+    font-size: 0.875rem;
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+.wallet-box {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.wallet-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #e5e7eb;
+    border-radius: 0.375rem;
+}
+
+.wallet-box-title {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 0.875rem;
+}
+
+.wallet-box-desc {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.btn-connect {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+}
+
+.btn-connect:hover {
+    background-color:var(--primary-color);
+}
+
+.wallet-info-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 1.5rem;
+}
+
+.wallet-info-text a {
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+.wallet-divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 1.5rem 0;
+}
+
+.btn-skip {
+    width: 100%;
+    background-color: white;
+    color: #374151;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-skip:hover {
+    background-color: #f3f4f6;
+}

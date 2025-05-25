@@ -1,0 +1,36 @@
+.btn-add-user {
+  flex-shrink: 0;
+  background-color: var(--background-secondary-color);     
+  color: var(--primary-color);                
+  padding: 0.25rem 0.75rem;      
+  border-radius: 0.375rem;       
+  font-size: 0.75rem;            
+  font-weight: 500;              
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-add-user:hover {
+  background-color: var( --background-color);        
+}
+
+.btn-confirm-signers {
+  padding: 0.5rem 1rem;                
+  background-color: var(--primary-color);          
+  color: #ffffff;                     
+  border: 1px solid transparent;     
+  border-radius: 0.5rem;              
+  font-size: 0.875rem;                 
+  font-weight: 500;                    
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-confirm-signers:hover:not(:disabled) {
+  background-color: var(--hover-color);          
+}
+
+.btn-confirm-signers:disabled {
+  background-color: var(--disabled-color);           
+  cursor: not-allowed;
+  opacity: 0.7;
+}
